@@ -1,0 +1,39 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.silikonm.skin</groupId>
+  <artifactId>SilikonMSkin</artifactId>
+  <version>0.0.1</version>
+  <packaging>jar</packaging>
+  
+  <build>  
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<targetPath>com/silikonm/skin</targetPath>
+				<includes>
+					<include>synth.xml</include>
+					<include>alertButton.png</include>
+					<include>alertButtonMouseOver.png</include>
+					
+					<include>generalButton.png</include>
+					<include>generalButtonMouseOver.png</include>
+					<include>infoButton.png</include>
+					<include>infoButtonMouseOver.png</include>
+					
+					<include>menu.png</include>
+					<include>menuItem.png</include>
+					
+					<include>warningButton.png</include>
+					<include>warningButtonMouseOver.png</include>
+					<include>titleBar.png</include>
+					
+					<include>tabbedPaneTabBorder.png</include>
+					<include>tabbedPaneTabBorderSelected.png</include>
+					<include>panelBackground_1.png</include>
+					<include>textField.png</include>
+					
+				</includes>
+			</resource>			
+		</resources>
+  </build>
+</project>

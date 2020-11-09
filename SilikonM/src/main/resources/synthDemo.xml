@@ -1,0 +1,137 @@
+<synth>
+
+ <!-- Style that all regions will use -->
+  <style id="backingStyle">
+    
+    
+    <font name="Monospaced" size="12"/>
+    <state>
+      <color value="WHITE" type="BACKGROUND"/>
+      <color value="#000000" type="FOREGROUND"/>
+    </state>
+  </style>
+  <bind style="backingStyle" type="region" key=".*"/>
+  
+  <!-- Style for the title bar -->
+  <style id="titlePanelStyle">   
+  <state>
+    <imagePainter method="panelBackground" path="titlePanel.jpg"
+	                  sourceInsets="5 5 5 5" />      
+    </state>
+  </style>
+  <bind style="titlePanelStyle" type="name" key="titlePanel"/>
+  
+  <!-- style for the title -->
+  <style id="titleStyle">
+  <font name="Dialog" size="16"/>
+  <insets top="5" left="5" bottom="5" right="5"/>
+  <state>
+    <imagePainter method="panelBackground" path="titlePanel.jpg"
+	                  sourceInsets="5 5 5 5" />
+      <color value="#FFFFFF" type="FOREGROUND"/>
+    </state>
+   </style>
+  <bind style="titleStyle" type="name" key="titleLable"/>
+  
+  <!-- style main tabbed pane -->
+  <style id="tabbedPaneStyle">
+   <opaque value="TRUE"/>
+   	  <insets top="0" left="5" bottom="10" right="5"/>
+   <state value="SELECTED">
+   	<imagePainter method="tabbedPaneTabBorder"
+		         path="tabbedPaneTabBorderSelected.png"
+	                  sourceInsets="10 5 10 5" />
+   </state>
+   
+   <state value="FOCUSED">
+   	<color value="GREEN" type="BACKGROUND"/>
+   </state>
+          
+   <state>
+      <imagePainter method="tabbedPaneTabBorder"
+		         path="tabbedPaneTabBorder.png"
+	                  sourceInsets="5 5 5 5" />
+    </state>
+  </style>
+  <bind style="tabbedPaneStyle" type="name" key="tabbedPane"/>
+ 	 
+ 	 <!-- menu item  -->
+  <style id="menuItemStyle">
+  
+  <state>
+      <imagePainter method="menuItemBackground"
+		         path="menuBar.png"
+	                  sourceInsets="5 5 5 5" />
+    </state>
+  </style> 
+  <bind style="menuItemStyle"  type="region" key="menuItem.*"/>
+  
+  <!-- menu -->
+  <style id="menuStyle">
+  <insets top="3" left="3" bottom="3" right="10"/>
+   </style> 
+  <bind style="menuStyle"  type="region" key="menu.*"/>
+  
+  <!-- menu bar -->
+  <style id="menuBarStyle">
+  
+   <state>
+   <imagePainter method="menuBarBackground"
+		         path="menuBar.png"
+	                  sourceInsets="5 5 5 5" />
+	                  </state>
+  </style>
+  <bind style="menuBarStyle"  type="region" key="menuBar.*"/>
+  
+ <style id="textfield">
+    <insets top="4" left="6" bottom="4" right="6"/>
+    <state>       
+       <color value="#D2DFF2" type="BACKGROUND"/>       
+       <color value="#000000" type="TEXT_FOREGROUND"/>
+    </state>
+    <imagePainter method="textFieldBorder" path="tabbedPaneTabBorder.png"                   
+    	sourceInsets="4 6 4 6" paintCenter="false"/> 
+  </style>
+  <bind style="textfield" type="region" key="TextField"/>
+    
+    
+    
+   <style id="button">
+  	
+    <property key="Button.textShiftOffset" type="integer" value="1"/>
+	
+	  <insets top="10" left="10" bottom="10" right="10"/>
+    <state>
+	    <imagePainter method="buttonBackground" path="background.png"
+	                  sourceInsets="5 5 5 5" />
+	    <font name="Dialog" size="12"/>
+	    <color type="TEXT_FOREGROUND" value="#FFFFFF"/>
+    </state>
+              
+	  <state value="PRESSED"> 
+	    <imagePainter method="buttonBackground"
+		         path="pressed.png"
+	                  sourceInsets="5 5 5 5" />
+	  </state>
+            
+    <state value="MOUSE_OVER">    
+	    <imagePainter method="buttonBackground"
+		         path="mouse_over.png"
+	                 sourceInsets="5 5 5 5" />
+	  </state>
+	  
+  </style>
+  <bind style="button" type="region" key="Button.*"/>
+    <!--   
+     
+  <style id="checkbox">
+    <imageIcon id="check_off" path="images/checkbox_off.png"/>
+    <imageIcon id="check_on" path="images/checkbox_on.png"/>
+    <property key="CheckBox.icon" value="check_off"/>
+    <state value="SELECTED">   
+      <property key="CheckBox.icon" value="check_on"/>
+	  </state>
+  </style>
+  <bind style="checkbox" type="region" key="Checkbox"/>	 
+   --> 
+</synth>

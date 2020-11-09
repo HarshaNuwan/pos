@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Built-By: Harsha
+Build-Jdk: 1.7.0_67
+Package: com.silikonm.pos.item
+Class-Path: lib/SilikonM-commons-0.0.1.jar lib/commons-configuration-1
+ .9.jar lib/db-utilities-1.0.jar lib/mysql-connector-java-5.1.9.jar li
+ b/hibernate-core-3.3.2.GA.jar lib/antlr-2.7.6.jar lib/slf4j-api-1.5.8
+ .jar lib/javassist-3.12.1.GA.jar lib/hibernate-annotations-3.3.0.ga.j
+ ar lib/hibernate-3.2.1.ga.jar lib/ehcache-1.2.3.jar lib/asm-attrs-1.5
+ .3.jar lib/persistence-api-1.0.jar lib/hibernate-commons-annotations-
+ 3.0.0.ga.jar lib/dom4j-1.6.1.jar lib/xml-apis-1.0.b2.jar lib/commons-
+ logging-1.1.1.jar lib/commons-collections-3.2.1.jar lib/commons-beanu
+ tils-1.8.2.jar lib/commons-lang-2.4.jar lib/commons-digester-1.6.jar 
+ lib/cglib-2.2.jar lib/asm-3.1.jar lib/jta-1.1.jar lib/slf4j-log4j12-1
+ .5.6.jar lib/log4j-1.2.14.jar lib/miglayout-swing-4.2.jar lib/miglayo
+ ut-core-4.2.jar
+Main-Class: com.silikonm.pos.item.Item
+Created-By: Maven Integration for Eclipse
+mode: development
+url: 
+

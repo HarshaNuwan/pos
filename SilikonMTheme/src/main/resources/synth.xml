@@ -1,0 +1,169 @@
+<synth>
+
+	<!-- Style that all regions will use -->
+	<style id="backingStyle">
+		<font name="Monospaced" size="12" />
+		<state>
+			<!-- <color value="WHITE" type="BACKGROUND" /> -->
+			<!-- <color value="#000000" type="FOREGROUND" /> -->
+		</state>
+	</style>
+	<bind style="backingStyle" type="region" key=".*" />
+
+	<!-- Style for the title bar -->
+	<style id="titlePanelStyle">
+		<state>
+			<imagePainter method="panelBackground" path="titleBar.png"
+				sourceInsets="5 5 5 5" />
+		</state>
+	</style>
+	<bind style="titlePanelStyle" type="name" key="titlePanel" />
+
+	<!-- menu bar -->
+	<style id="menuBarStyle">
+
+		<state>
+			<imagePainter method="menuBarBackground" path="menu.png"
+				sourceInsets="5 5 5 5" />
+			<color value="#000000" type="BACKGROUND" />
+			<color value="WHITE" type="FOREGROUND" />
+		</state>
+	</style>
+	<bind style="menuBarStyle" type="region" key="menuBar.*" />
+
+	<!-- menu -->
+	<style id="menuStyle">
+		<insets top="3" left="3" bottom="3" right="10" />
+	</style>
+	<bind style="menuStyle" type="region" key="menu.*" />
+
+	<!-- menu item -->
+	<style id="menuItemStyle">
+		<insets top="5" left="5" bottom="5" right="5" />
+		<state>
+			<imagePainter method="menuItemBackground" path="menuItem.png"
+				sourceInsets="5 5 5 5" />
+		</state>
+	</style>
+	<bind style="menuItemStyle" type="region" key="menuItem.*" />
+
+	<!-- style main tabbed pane -->
+	<style id="tabbedPaneStyle">
+		<opaque value="TRUE" />
+		<insets top="0" left="5" bottom="10" right="5" />
+
+
+		<state value="SELECTED">
+			<imagePainter method="tabbedPaneTabBorder" path="tabbedPaneTabBorderSelected.png"
+				sourceInsets="10 10 10 5" />
+		</state>
+
+		<state value="FOCUSED">
+			<color value="GREEN" type="BACKGROUND" />
+		</state>
+
+		<state>
+			<imagePainter method="tabbedPaneTabBorder" path="tabbedPaneTabBorder.png"
+				sourceInsets="5 5 5 5" />
+		</state>
+	</style>
+	<bind style="tabbedPaneStyle" type="name" key="tabbedPane" />
+
+	<style id="button">
+
+		<property key="Button.textShiftOffset" type="integer" value="1" />
+
+		<insets top="5" left="5" bottom="5" right="5" />
+		<state>
+			<imagePainter method="buttonBackground" path="generalButton.png"
+				sourceInsets="13 13 13 13" />
+			<font name="Dialog" size="12" />
+			<color type="TEXT_FOREGROUND" value="#FFFFFF" />
+		</state>
+
+		<state value="PRESSED">
+			<imagePainter method="buttonBackground" path="generalButtonMouseOver.png"
+				sourceInsets="13 13 13 13" />
+		</state>
+
+		<state value="MOUSE_OVER">
+			<imagePainter method="buttonBackground" path="generalButtonMouseOver.png"
+				sourceInsets="13 13 13 13" />
+		</state>
+
+	</style>
+	<bind style="button" type="name" key="newButton" />
+
+	<!-- Table style -->
+	<style id="tableStyle">
+		<opaque value="true" />
+		<object class="javax.swing.plaf.ColorUIResource" id="rowH">
+			<int>100</int>
+			<int>45</int>
+			<int>45</int>
+		</object>
+		<font name="Monospaced" size="16" style="BOLD" />
+		<state>
+
+			<property key="Table.background" type="idref" value="rowH" />
+			<property key="Table.gridColor" type="idref" value="rowH" />
+			<property key="Table.rowHeight" type="integer" value="50" />
+		</state>
+	</style>
+	<bind style="tableStyle" type="region" key="Table" />
+
+	<!-- billing info keys panel -->
+	<style id="billingInfoKeysPanel">
+		<insets top="5" left="5" bottom="5" right="5" />
+		<state>
+			<imagePainter path="menuItem.png" sourceInsets="5 5 5 5" />
+		</state>
+	</style>
+	<bind style="billingInfoKeysPanel" type="name" key="billingInfo" />
+
+	<style id="billedItemsHolderPanel">
+		<insets top="5" left="5" bottom="5" right="5" />
+		<state>
+			<imagePainter path="panelBackground_1.png" sourceInsets="5 5 5 5" />
+		</state>
+	</style>
+	<bind style="billedItemsHolderPanel" type="name" key="billedItemsHolderPanel" />
+
+
+	<!-- billingFunctionsPanel -->
+	<style id="billingFunctionsPanel">
+		<insets top="5" left="5" bottom="5" right="5" />
+		<state>
+			<imagePainter path="panelBackground_1.png" sourceInsets="5 5 5 5" />
+		</state>
+	</style>
+	<bind style="billingFunctionsPanel" type="name" key="billingFunctionsPanel" />
+
+	<!-- Scroll Bars -->
+	<style id="scrollBarStyle">
+		<opaque value="true" />
+		<state>
+			<insets top="1" left="1" bottom="1" right="1" />
+			<color value="#AABBCC" type="BACKGROUND" />
+		</state>
+	</style>
+	<bind style="scrollBarStyle" type="region" key="scrollBarTrack" />
+
+	<style id="scrollBarThumbStyle">
+		<opaque value="true" />
+		<state>
+			<insets top="1" left="1" bottom="1" right="1" />
+			<color value="#0067FF" type="BACKGROUND" />
+		</state>
+	</style>
+	<bind style="scrollBarThumbStyle" type="region" key="scrollBarThumb" />
+
+	<!-- Text field -->
+	<style id="textfield">
+		<insets top="4" left="6" bottom="3" right="6" />		
+		<imagePainter method="textFieldBorder" path="textField.png"
+			sourceInsets="4 6 4 6" paintCenter="false" />
+	</style>
+	<bind style="textfield" type="region" key="TextField" />
+</synth>
+

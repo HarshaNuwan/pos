@@ -1,0 +1,66 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.silikonm.pos.itemtype</groupId>
+	<artifactId>item-category</artifactId>
+	<version>0.0.1</version>
+	<packaging>jar</packaging>
+
+	<dependencies>
+		<dependency>
+			<groupId>silikonm-commons</groupId>
+			<artifactId>SilikonM-commons</artifactId>
+			<version>0.0.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.silikonm.common</groupId>
+			<artifactId>db-utilities</artifactId>
+			<version>1.0</version>
+
+		</dependency>
+
+		<dependency>
+			<groupId>com.miglayout</groupId>
+			<artifactId>miglayout-swing</artifactId>
+			<version>4.2</version>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>com.silikonm.pos.itemtype.ItemType</mainClass>
+							<packageName>com.silikonm.pos.itemtype</packageName>
+							<addClasspath>true</addClasspath>
+							<classpathPrefix>lib/</classpathPrefix>
+						</manifest>
+						<manifestEntries>
+							<mode>development</mode>
+							<url>${pom.url}</url>
+						</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin>
+		</plugins>
+
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<targetPath>/com/silikonm/pos/itemtype/resources</targetPath>
+				<includes>
+				<include>table_2_delete.png</include>
+				<include>Text-Document.png</include>
+				</includes>
+			</resource>
+		</resources>
+	</build>
+
+</project>

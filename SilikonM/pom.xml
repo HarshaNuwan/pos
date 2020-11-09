@@ -1,0 +1,90 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.silikonm.core</groupId>
+	<artifactId>SilikonM_core</artifactId>
+	<version>0.0.1</version>
+	<packaging>jar</packaging>
+
+	<dependencies>
+		<dependency>
+			<groupId>silikonm-commons</groupId>
+			<artifactId>SilikonM-commons</artifactId>
+			<version>0.0.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.silikonm.common</groupId>
+			<artifactId>db-utilities</artifactId>
+			<version>1.0</version>
+
+		</dependency>
+
+		<dependency>
+			<groupId>com.miglayout</groupId>
+			<artifactId>miglayout-swing</artifactId>
+			<version>4.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.silikonm.skin</groupId>
+			<artifactId>SilikonMSkin</artifactId>
+			<version>0.0.1</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<targetPath>com/silikonm/ui/support</targetPath>
+				<includes>
+					<include>delete.png</include>
+					<include>closeButton.png</include>
+					<include>closeButtonMouseOver.png</include>
+					<include>maximizeButton.png</include>
+					<include>maximizeButtonMouseOver.png</include>
+					<include>minimizeButton.png</include>
+					<include>minimizeButtonMouseOver.png</include>
+				</includes>
+			</resource>
+			<resource>
+				<directory>src/main/resources</directory>
+				<targetPath>com/silikonm/core</targetPath>
+				<includes>
+					<include>synthDemo.xml</include>
+					<include>titlePanel.png</include>
+					<include>tabbedPaneTabBorder.png</include>
+					<include>tabbedPaneTabBorderSelected.png</include>
+					<include>menuBar.png</include>
+					<include>background.png</include>
+					<include>mouse_over.png</include>
+					<include>pressed.png</include>
+					<include>splash_sc.png</include>
+					
+				</includes>
+			</resource>
+		</resources>
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>com.silikonm.core.Main</mainClass>
+							<packageName>com.silikonm.core</packageName>
+							<addClasspath>true</addClasspath>
+							<classpathPrefix>lib/</classpathPrefix>
+						</manifest>
+						<manifestEntries>
+							<mode>development</mode>
+							<url>${pom.url}</url>
+						</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
